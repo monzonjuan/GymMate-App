@@ -1,0 +1,30 @@
+<resources>
+    <style name="GM.Button.Primary" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/gm_primary</item>
+        <item name="android:textColor">@color/gm_on_primary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="cornerRadius">32dp</item>
+    </style>
+
+    <style name="GM.Button.Outline" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="strokeColor">@color/gm_primary</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="android:textColor">@color/gm_primary</item>
+        <item name="iconTint">@color/gm_primary</item>
+        <item name="cornerRadius">32dp</item>
+    </style>
+
+    <style name="GM.Day">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/gm_text</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:background">@drawable/bg_circle_outline</item>
+    </style>
+
+    <style name="GM.Day.Selected">
+        <item name="android:textColor">@color/gm_on_primary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/bg_circle_selected</item>
+    </style>
+</resources>

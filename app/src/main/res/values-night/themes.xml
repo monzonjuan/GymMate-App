@@ -1,7 +1,10 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.GymMate" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+<resources>
+    <style name="Theme.Gymmate" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/gm_primary</item>
+        <item name="colorOnPrimary">@color/gm_on_primary</item>
+        <item name="colorSurface">@color/gm_surface</item>
+        <item name="colorOnSurface">@color/gm_text</item>
+        <item name="android:windowBackground">@color/gm_background</item>
+        <item name="android:statusBarColor">@color/gm_background</item>
     </style>
 </resources>

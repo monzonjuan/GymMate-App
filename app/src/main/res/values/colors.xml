@@ -2,4 +2,12 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="gm_background">#121212</color>
+    <color name="gm_surface">#1E1E1E</color>
+    <color name="gm_surface_variant">#2A2A2A</color>
+    <color name="gm_stroke">#3A3A3A</color>
+    <color name="gm_primary">#C6F700</color>
+    <color name="gm_on_primary">#121212</color>
+    <color name="gm_text">#FFFFFF</color>
+    <color name="gm_text_secondary">#A0A0A0</color>
 </resources>
