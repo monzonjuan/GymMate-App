@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">GymMate</string>
+    <!-- Perfil físico -->
+    <string name="perfil_titulo">Perfil Físico</string>
+    <string name="perfil_subtitulo">Personaliza tu experiencia</string>
+    <string name="perfil_datos_basicos">Datos básicos</string>
+    <string name="perfil_edad">Edad</string>
+    <string name="perfil_peso">Peso (kg)</string>
+    <string name="perfil_altura">Altura (cm)</string>
+    <string name="perfil_nivel">Nivel de entrenamiento</string>
+    <string name="perfil_principiante">Principiante</string>
+    <string name="perfil_intermedio">Intermedio</string>
+    <string name="perfil_avanzado">Avanzado</string>
+    <string name="perfil_dias">Días disponibles semanales</string>
+    <string name="perfil_objetivo">Objetivo principal</string>
+    <string name="perfil_fuerza">Fuerza</string>
+    <string name="perfil_hipertrofia">Hipertrofia</string>
+    <string name="perfil_acondicionamiento">Acondicionamiento</string>
+    <string name="btn_guardar_continuar">GUARDAR Y CONTINUAR</string>
 </resources>

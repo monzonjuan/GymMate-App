@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Seleccionado: sin relleno, solo se ve el borde lima -->
+    <item android:state_checked="true" android:color="@android:color/transparent" />
+    <!-- Comodin (siempre va ultimo): gris apagado -->
+    <item android:color="@color/gym_surface_variant" />
+</selector>
