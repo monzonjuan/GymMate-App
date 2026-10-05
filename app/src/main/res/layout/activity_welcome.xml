@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.auth.WelcomeActivity"
+    android:background="@color/gm_background"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:id="@+id/layoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvLogoTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@color/gm_text"
+            android:textSize="36sp"
+            android:textStyle="bold">
+        </TextView>
+
+        <TextView
+            android:id="@+id/tvSubtitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/welcome_subtitle_1"
+            android:textColor="@color/gm_text_secondary"
+            android:textSize="18sp"
+            android:textStyle="bold">
+        </TextView>
+
+        <TextView
+            android:id="@+id/tvSubtitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/welcome_subtitle_2"
+            android:textColor="@color/gm_text_secondary"
+            android:textSize="16sp">
+        </TextView>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivWelcomeImage"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:contentDescription="@null"
+        app:layout_constraintTop_toBottomOf="@id/layoutHeader"
+        app:layout_constraintBottom_toTopOf="@id/layoutButtons"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_gym_placeholder"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/layoutButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="@string/btn_login"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/gm_primary"
+            app:cornerRadius="28dp">
+        </Button>
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/btn_register"
+            android:textColor="@color/gm_primary"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="@android:color/transparent"
+            app:strokeColor="@color/gm_primary"
+            app:cornerRadius="28dp"
+            app:strokeWidth="2dp">
+        </Button>
+
+        <TextView
+            android:id="@+id/tvTerms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/terms"
+            android:textColor="@color/gm_text_secondary"
+            android:textSize="12sp">
+        </TextView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

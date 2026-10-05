@@ -52,4 +52,33 @@
     <string name="home_datos_rapidos">Datos Rapidos</string>
     <string name="home_racha">Racha activa</string>
     <string name="home_peso_actual">Peso actual</string>
+
+    <!-- Pantalla de Bienvenida (Welcome) -->
+    <string name="welcome_subtitle_1">Tu progreso bajo control</string>
+    <string name="welcome_subtitle_2">Asistente y Gestor de Rutinas</string>
+    <string name="btn_login">INICIAR SESIÓN</string>
+    <string name="btn_register">REGISTRARSE</string>
+    <string name="terms">Al contiunar, aceptas nuestros Términos y Políticas.</string>
+
+    <!-- Campos Comunes (Login / Registro) -->
+    <string name="email">Correo Electronico</string>
+    <string name="password">Contraseña</string>
+    <string name="confirm_password">Confirmar Contraseña</string>
+
+    <!-- Pantalla de Registro (Register) -->
+    <string name="create_account">Crear cuenta</string>
+    <string name="have_account">¿Ya tienes cuenta?</string>
+
+    <!-- Pantalla de Inicio de Sesión (Login) -->
+    <string name="tv_login">Inicia sesión</string>
+    <string name="subtitle_login">Tu progreso bajo control</string>
+    <string name="login_forgot_password">¿Olvidaste tu contraseña?</string>
+    <string name="login_dont_have_account">¿No tienes cuenta?</string>
+    <string name="login_sign_up">Regístrate</string>
+
+    <!-- Pantalla Recuperar Contraseña (Forgot Password) -->
+    <string name="forgot_recover_password">Recuperar contraseña</string>
+    <string name="forgot_instruction">Ingresa tu correo electrónico para enviarte un enlace de restablecimiento.</string>
+    <string name="forgot_send_link">ENVIAR ENLACE</string>
+    <string name="forgot_remember_password">¿Recordaste tu contraseña?</string>
 </resources>
