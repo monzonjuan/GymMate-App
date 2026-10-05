@@ -14,9 +14,4 @@
     <color name="gm_text_secondary">#A0A0A0</color>
     <color name="gm_danger">#FF5252</color>
 
-    <!-- Paleta GymMate -->
-    <color name="gym_background">#121212</color>
-    <color name="gym_green">#CCFF00</color>
-    <color name="gym_text_primary">#FFFFFF</color>
-    <color name="gym_text_secondary">#9E9E9E</color>
 </resources>

@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.auth.WelcomeActivity"
-    android:background="@color/gym_background"
+    android:background="@color/gm_background"
     android:padding="24dp">
 
     <LinearLayout
@@ -23,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/app_name"
-            android:textColor="@color/gym_text_primary"
+            android:textColor="@color/gm_text"
             android:textSize="36sp"
             android:textStyle="bold">
         </TextView>
@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@string/welcome_subtitle_1"
-            android:textColor="@color/gym_text_secondary"
+            android:textColor="@color/gm_text_secondary"
             android:textSize="18sp"
             android:textStyle="bold">
         </TextView>
@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:text="@string/welcome_subtitle_2"
-            android:textColor="@color/gym_text_secondary"
+            android:textColor="@color/gm_text_secondary"
             android:textSize="16sp">
         </TextView>
     </LinearLayout>
@@ -79,7 +79,7 @@
             android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:backgroundTint="@color/gym_green"
+            android:backgroundTint="@color/gm_primary"
             app:cornerRadius="28dp">
         </Button>
 
@@ -89,11 +89,11 @@
             android:layout_height="56dp"
             android:layout_marginTop="16dp"
             android:text="@string/btn_register"
-            android:textColor="@color/gym_green"
+            android:textColor="@color/gm_primary"
             android:textSize="16sp"
             android:textStyle="bold"
             android:backgroundTint="@android:color/transparent"
-            app:strokeColor="@color/gym_green"
+            app:strokeColor="@color/gm_primary"
             app:cornerRadius="28dp"
             app:strokeWidth="2dp">
         </Button>
@@ -105,7 +105,7 @@
             android:layout_marginTop="20dp"
             android:gravity="center"
             android:text="@string/terms"
-            android:textColor="@color/gym_text_secondary"
+            android:textColor="@color/gm_text_secondary"
             android:textSize="12sp">
         </TextView>
 
