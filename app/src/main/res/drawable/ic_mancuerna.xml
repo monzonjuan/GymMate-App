@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Icono de mancuerna de GymMate, dibujado como VectorDrawable.
+    Un vector no guarda pixeles: guarda las instrucciones para dibujar
+    las formas. Por eso se ve nitido en cualquier tamanio y pesa ~1 KB,
+    sin necesidad de versiones para cada densidad de pantalla.
+
+    El lienzo es de 48x28 (viewportWidth/Height) y el tamanio real se
+    fija con width/height. Cambiar el tamanio NO deforma nada.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="28dp"
+    android:viewportWidth="48"
+    android:viewportHeight="28">
+
+    <!-- tope izquierdo -->
+    <path
+        android:fillColor="@color/gm_primary"
+        android:pathData="M2.70,10.50H2.70A1.70,1.70 0 0 1 4.40,12.20V15.80A1.70,1.70 0 0 1 2.70,17.50H2.70A1.70,1.70 0 0 1 1.00,15.80V12.20A1.70,1.70 0 0 1 2.70,10.50Z" />
+    <!-- disco izquierdo -->
+    <path
+        android:fillColor="@color/gm_primary"
+        android:pathData="M7.80,6.50H8.40A2.20,2.20 0 0 1 10.60,8.70V19.30A2.20,2.20 0 0 1 8.40,21.50H7.80A2.20,2.20 0 0 1 5.60,19.30V8.70A2.20,2.20 0 0 1 7.80,6.50Z" />
+    <!-- placa izquierda -->
+    <path
+        android:fillColor="@color/gm_primary"
+        android:pathData="M14.60,2.00H15.60A2.80,2.80 0 0 1 18.40,4.80V23.20A2.80,2.80 0 0 1 15.60,26.00H14.60A2.80,2.80 0 0 1 11.80,23.20V4.80A2.80,2.80 0 0 1 14.60,2.00Z" />
+    <!-- barra -->
+    <path
+        android:fillColor="@color/gm_primary"
+        android:pathData="M18.40,10.50H29.60A0.00,0.00 0 0 1 29.60,10.50V17.50A0.00,0.00 0 0 1 29.60,17.50H18.40A0.00,0.00 0 0 1 18.40,17.50V10.50A0.00,0.00 0 0 1 18.40,10.50Z" />
+    <!-- placa derecha -->
+    <path
+        android:fillColor="@color/gm_primary"
+        android:pathData="M32.40,2.00H33.40A2.80,2.80 0 0 1 36.20,4.80V23.20A2.80,2.80 0 0 1 33.40,26.00H32.40A2.80,2.80 0 0 1 29.60,23.20V4.80A2.80,2.80 0 0 1 32.40,2.00Z" />
+    <!-- disco derecho -->
+    <path
+        android:fillColor="@color/gm_primary"
+        android:pathData="M39.60,6.50H40.20A2.20,2.20 0 0 1 42.40,8.70V19.30A2.20,2.20 0 0 1 40.20,21.50H39.60A2.20,2.20 0 0 1 37.40,19.30V8.70A2.20,2.20 0 0 1 39.60,6.50Z" />
+    <!-- tope derecho -->
+    <path
+        android:fillColor="@color/gm_primary"
+        android:pathData="M45.30,10.50H45.30A1.70,1.70 0 0 1 47.00,12.20V15.80A1.70,1.70 0 0 1 45.30,17.50H45.30A1.70,1.70 0 0 1 43.60,15.80V12.20A1.70,1.70 0 0 1 45.30,10.50Z" />
+
+</vector>

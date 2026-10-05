@@ -1,8 +1,18 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.GymMate" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    <style name="Base.Theme.GymMate" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/gm_primary</item>
+        <item name="colorOnPrimary">@color/gm_on_primary</item>
+
+        <item name="colorSecondaryContainer">@color/gm_primary</item>
+        <item name="colorOnSecondaryContainer">@color/gm_on_primary</item>
+        <item name="colorOutline">@color/gm_stroke</item>
+
+        <item name="colorSurface">@color/gm_surface</item>
+        <item name="colorOnSurface">@color/gm_text</item>
+        <item name="colorSurfaceVariant">@color/gm_surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/gm_text_secondary</item>
+        <item name="android:colorBackground">@color/gm_background</item>
     </style>
 
     <style name="Theme.GymMate" parent="Base.Theme.GymMate" />

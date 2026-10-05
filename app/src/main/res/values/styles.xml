@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Chips que cambian de color al seleccionarlos -->
+    <style name="Widget.GymMate.Chip.Filter" parent="Widget.Material3.Chip.Filter">
+        <item name="chipSurfaceColor">@android:color/transparent</item>
+        <item name="chipBackgroundColor">@color/chip_bg</item>
+        <item name="chipStrokeColor">@color/chip_stroke</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="android:textColor">@color/chip_text</item>
+        <item name="checkedIconVisible">false</item>
+        <item name="chipMinHeight">44dp</item>
+        <item name="chipCornerRadius">22dp</item>
+
+    </style>
+
+    <!-- Estilo de los circulos de los dias -->
+    <style name="Widget.GymMate.Chip.Day" parent="Widget.Material3.Chip.Filter">
+        <item name="chipStrokeWidth">0dp</item>
+        <item name="checkedIconVisible">false</item>
+        <item name="chipMinHeight">44dp</item>
+        <item name="chipCornerRadius">22dp</item>
+        <item name="textStartPadding">0dp</item>
+        <item name="textEndPadding">0dp</item>
+        <item name="chipStartPadding">14dp</item>
+        <item name="chipEndPadding">14dp</item>
+    </style>
+
+    <style name="Widget.GymMate.TextInput" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusTopStart">16dp</item>
+        <item name="boxCornerRadiusTopEnd">16dp</item>
+        <item name="boxCornerRadiusBottomStart">16dp</item>
+        <item name="boxCornerRadiusBottomEnd">16dp</item>
+    </style>
+
+
+    <!-- Chips del catalogo: se RELLENAN de lima al elegirlos.
+         Hereda los colores del tema (colorSecondaryContainer / colorSurface),
+         por eso no necesita archivos en res/color. Solo ajusta la forma. -->
+    <style name="Widget.GymMate.Chip.Choice" parent="Widget.Material3.Chip.Filter">
+        <item name="checkedIconVisible">false</item>
+        <item name="chipMinHeight">40dp</item>
+        <item name="chipCornerRadius">20dp</item>
+    </style>
+
+
+    <!-- Material3 dibuja una "pildora" detras del item seleccionado.
+         El mockup no la tiene, asi que la volvemos transparente. -->
+    <style name="Widget.GymMate.BottomNav.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@android:color/transparent</item>
+    </style>
+
+</resources>
