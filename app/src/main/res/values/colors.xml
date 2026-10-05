@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Colores base de Android -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Paleta GymMate -->
+    <color name="gym_background">#121212</color>
+    <color name="gym_green">#CCFF00</color>
+    <color name="gym_text_primary">#FFFFFF</color>
+    <color name="gym_text_secondary">#9E9E9E</color>
 </resources>
