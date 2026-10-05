@@ -27,13 +27,22 @@
             android:padding="24dp">
 
 
-            <!-- ####################################################
-                 ## NUEVO - LO VEMOS JUNTOS: barra superior        ##
-                 ##                                                ##
-                 ## Flecha de volver (<-) a la izquierda y el logo ##
-                 ## GymMate centrado. Necesita ImageView + iconos  ##
-                 ## vectoriales. Leccion de iconos.                ##
-                 #################################################### -->
+            <!-- Fila de volver. Sin logo a proposito: en una pantalla
+                 interna el logo ocupa ~68dp y no aporta nada, el usuario
+                 ya sabe en que app esta. La flecha SI hace falta: es la
+                 unica forma de volver al catalogo. -->
+            <ImageView
+                android:id="@+id/btnVolver"
+                android:layout_width="54dp"
+                android:layout_height="56dp"
+                android:layout_marginBottom="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:contentDescription="@string/volver"
+                android:focusable="true"
+                android:padding="8dp"
+                android:src="@drawable/ic_arrow_back"
+                app:tint="@color/gm_text" />
 
             <TextView
                 android:id="@+id/nombreEjercicio"
@@ -49,6 +58,7 @@
                  por eso android:clickable="false" y sin ChipGroup
                  con singleSelection. Van dentro de un ChipGroup igual,
                  para que se acomoden solos y pasen de linea si no entran. -->
+
             <com.google.android.material.chip.ChipGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -60,8 +70,8 @@
                     style="@style/Widget.GymMate.Chip.Choice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:clickable="false"
                     android:checkable="false"
+                    android:clickable="false"
                     tools:text="Pecho (Principal)" />
 
                 <com.google.android.material.chip.Chip
@@ -69,8 +79,8 @@
                     style="@style/Widget.GymMate.Chip.Choice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:clickable="false"
                     android:checkable="false"
+                    android:clickable="false"
                     tools:text="Triceps y Hombros" />
 
             </com.google.android.material.chip.ChipGroup>
@@ -136,33 +146,49 @@
                 android:textStyle="bold"
                 android:layout_marginTop="24dp" />
 
-            <!-- ####################################################
-                 ## NUEVO - LO VEMOS JUNTOS: tarjeta de consejo    ##
-                 ##                                                ##
-                 ## En el mockup es un recuadro redondeado con un  ##
-                 ## icono de atencion (!) a la izquierda y el      ##
-                 ## texto al lado. Es MaterialCardView otra vez,   ##
-                 ## con un LinearLayout horizontal adentro.        ##
-                 ##                                                ##
-                 ## Dejo el TextView suelto para que se lea, y lo  ##
-                 ## envolvemos en la tarjeta cuando veamos cards.  ##
-                 #################################################### -->
-            <TextView
-                android:id="@+id/consejoTecnico"
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.Material3.CardView.Filled"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/gm_text"
-                android:textSize="15sp"
-                android:lineSpacingExtra="4dp"
                 android:layout_marginTop="12dp"
-                tools:text="Evita rebotar la barra en el pecho y manten los codos a 45 grados." />
+                app:cardBackgroundColor="@color/gm_surface"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/gm_stroke"
+                app:strokeWidth="1dp"
+                app:contentPadding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="12dp"
+                        android:src="@drawable/ic_error"
+                        app:tint="@color/gm_primary"
+                        android:contentDescription="@null" />
+
+                    <TextView
+                        android:id="@+id/consejoTecnico"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gm_text"
+                        android:textSize="15sp"
+                        android:lineSpacingExtra="4dp"
+                        tools:text="Evita rebotar la barra en el pecho y manten los codos a 45 grados." />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
 
         </LinearLayout>
     </ScrollView>
 
-    <!-- ####################################################
-         ## NUEVO - LO VEMOS JUNTOS: barra de navegacion   ##
-         ## (la misma de las otras pantallas)              ##
-         #################################################### -->
+    <!-- Barra inferior: una linea, definida en view_bottom_nav.xml -->
+    <include layout="@layout/view_bottom_nav" />
 
 </LinearLayout>

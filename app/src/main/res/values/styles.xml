@@ -43,4 +43,11 @@
         <item name="chipCornerRadius">20dp</item>
     </style>
 
+
+    <!-- Material3 dibuja una "pildora" detras del item seleccionado.
+         El mockup no la tiene, asi que la volvemos transparente. -->
+    <style name="Widget.GymMate.BottomNav.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@android:color/transparent</item>
+    </style>
+
 </resources>

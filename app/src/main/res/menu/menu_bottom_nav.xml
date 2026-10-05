@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    LAS 5 PESTANIAS DE LA BARRA INFERIOR.
+
+    Un "menu" es un recurso aparte, no un layout: describe OPCIONES, no
+    vistas. El mismo archivo sirve para una barra inferior, un menu
+    desplegable o un menu contextual.
+
+    BottomNavigationView admite entre 3 y 5 items. Con mas de 5 deja de
+    entrar el texto y hay que usar otro patron (un drawer lateral).
+
+    Los @+id/ de aca son los que Java va a usar para saber que pestania
+    toco el usuario y que fragment mostrar.
+-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_inicio"
+        android:icon="@drawable/ic_nav_inicio"
+        android:title="@string/nav_inicio" />
+
+    <item
+        android:id="@+id/nav_rutinas"
+        android:icon="@drawable/ic_nav_rutinas"
+        android:title="@string/nav_rutinas" />
+
+    <item
+        android:id="@+id/nav_ejercicios"
+        android:icon="@drawable/ic_nav_ejercicios"
+        android:title="@string/nav_ejercicios" />
+
+    <item
+        android:id="@+id/nav_entrenar"
+        android:icon="@drawable/ic_nav_entrenar"
+        android:title="@string/nav_entrenar" />
+
+    <item
+        android:id="@+id/nav_progreso"
+        android:icon="@drawable/ic_nav_progreso"
+        android:title="@string/nav_progreso" />
+
+</menu>

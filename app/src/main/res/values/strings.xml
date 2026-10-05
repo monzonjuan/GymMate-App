@@ -34,4 +34,22 @@
     <string name="detalle_consejo">Consejo tecnico</string>
     <string name="detalle_ver_gif">GIF / Video</string>
     <string name="detalle_volver">Volver</string>
+
+    <!-- Barra de navegacion inferior -->
+    <string name="nav_inicio">Inicio</string>
+    <string name="nav_rutinas">Rutinas</string>
+    <string name="nav_ejercicios">Ejercicios</string>
+    <string name="nav_entrenar">Entrenar</string>
+    <string name="nav_progreso">Progreso</string>
+    <string name="volver">Volver</string>
+
+    <!-- Home -->
+    <string name="home_resumen">Resumen semanal</string>
+    <string name="home_progreso_semana">Tu progreso de la semana</string>
+    <string name="home_hoy_toca">HOY TOCA ENTRENAR</string>
+    <string name="home_empezar">EMPEZAR ENTRENAMIENTO</string>
+    <string name="home_ultimo">Ultimo Entrenamiento</string>
+    <string name="home_datos_rapidos">Datos Rapidos</string>
+    <string name="home_racha">Racha activa</string>
+    <string name="home_peso_actual">Peso actual</string>
 </resources>

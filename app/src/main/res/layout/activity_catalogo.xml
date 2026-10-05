@@ -24,15 +24,6 @@
         android:paddingEnd="24dp"
         android:paddingTop="24dp">
 
-        <!-- ####################################################
-             ## NUEVO - LO VEMOS JUNTOS: barra superior        ##
-             ##                                                ##
-             ## En el mockup hay el logo GymMate centrado y un ##
-             ## icono de mancuerna a la derecha. Eso necesita  ##
-             ## ImageView + drawables vectoriales, y todavia   ##
-             ## no tenemos ninguno (solo los del launcher).    ##
-             ## Lo armamos en la leccion de iconos.            ##
-             #################################################### -->
 
         <TextView
             android:id="@+id/tituloCatalogo"
@@ -130,45 +121,33 @@
 
     </LinearLayout>
 
-    <!-- ####################################################
-         ## NUEVO - LO VEMOS JUNTOS: RecyclerView          ##
-         ##                                                ##
-         ## Aca va la lista de ejercicios. NO se escribe    ##
-         ## una fila por ejercicio: se define UN layout de  ##
-         ## fila (item_ejercicio.xml) y el RecyclerView lo  ##
-         ## repite tantas veces como datos haya, reciclando ##
-         ## las vistas que salen de pantalla.               ##
-         ##                                                 ##
-         ## Son 3 piezas: el RecyclerView (aca), el layout  ##
-         ## de la fila, y un Adapter en Java que los une.   ##
-         ##                                                 ##
-         ## Va a quedar asi:                                ##
-         ##   <androidx.recyclerview.widget.RecyclerView    ##
-         ##       android:id="@+id/listaEjercicios"         ##
-         ##       android:layout_width="match_parent"       ##
-         ##       android:layout_height="0dp"               ##
-         ##       android:layout_weight="1"                 ##
-         ##       tools:listitem="@layout/item_ejercicio"/> ##
-         #################################################### -->
+    <!-- ===================== LISTA DE EJERCICIOS =====================
+         El RecyclerView es solo el HUECO. No sabe nada de ejercicios:
+         el que decide que va en cada fila es el Adapter, que se le
+         asigna desde Java.
 
-    <!-- Relleno provisorio para que la cabecera no quede flotando.
-         Se borra cuando entre el RecyclerView. -->
-    <View
+         - height="0dp" + weight="1" -> ocupa todo el alto que sobra
+           debajo de la cabecera.
+         - app:layoutManager -> como se acomodan las filas. Linear = una
+           debajo de otra. (Hay Grid y Staggered para otros casos.)
+         - tools:listitem -> SOLO para el Preview: le dice que molde
+           dibujar para que no veas un rectangulo vacio al maquetar.
+         - clipToPadding="false" -> deja que las filas se dibujen sobre
+           el padding al scrollear, en vez de cortarse de golpe.
+    -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listaEjercicios"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="16dp"
+        android:clipToPadding="false"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_ejercicio" />
 
-    <!-- ####################################################
-         ## NUEVO - LO VEMOS JUNTOS: barra de navegacion   ##
-         ##                                                ##
-         ## Las 5 pestanias de abajo (Inicio / Rutinas /    ##
-         ## Ejercicios / Entrenar / Progreso).              ##
-         ## Necesita un BottomNavigationView + un archivo   ##
-         ## de menu en res/menu/ + 5 iconos.                ##
-         ##                                                 ##
-         ## OJO: esta barra es compartida con las pantallas ##
-         ## de Juan, asi que conviene acordarla con el      ##
-         ## antes de escribirla, para no duplicarla.        ##
-         #################################################### -->
+    <!-- Barra inferior: una linea, definida en view_bottom_nav.xml -->
+    <include layout="@layout/view_bottom_nav" />
 
 </LinearLayout>
