@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/gym_background">
+    android:background="@color/gm_background">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,7 +16,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/perfil_titulo"
-            android:textColor="@color/gym_text_primary"
+            android:textColor="@color/gm_text"
             android:textSize="34sp"
             android:textStyle="bold"
             android:letterSpacing="-0.02" />
@@ -25,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/perfil_subtitulo"
-            android:textColor="@color/gym_text_secondary"
+            android:textColor="@color/gm_text_secondary"
             android:textSize="16sp"
             android:layout_marginTop="4dp" />
 
@@ -35,7 +35,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/perfil_datos_basicos"
-            android:textColor="@color/gym_text_primary"
+            android:textColor="@color/gm_text"
             android:textSize="18sp"
             android:layout_marginTop="28dp" />
 
@@ -93,7 +93,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/perfil_nivel"
-            android:textColor="@color/gym_text_primary"
+            android:textColor="@color/gm_text"
             android:textSize="18sp"
             android:layout_marginTop="28dp" />
 
@@ -135,7 +135,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/perfil_dias"
-            android:textColor="@color/gym_text_primary"
+            android:textColor="@color/gm_text"
             android:textSize="18sp"
             android:layout_marginTop="28dp" />
 
@@ -156,7 +156,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/perfil_objetivo"
-            android:textColor="@color/gym_text_primary"
+            android:textColor="@color/gm_text"
             android:textSize="18sp"
             android:layout_marginTop="28dp" />
         <com.google.android.material.chip.ChipGroup
@@ -194,9 +194,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:backgroundTint="@color/gym_lime"
+            android:backgroundTint="@color/gm_primary"
             android:text="@string/btn_guardar_continuar"
-            android:textColor="@color/black" />
+            android:textColor="@color/gm_on_primary" />
 
 
     </LinearLayout>

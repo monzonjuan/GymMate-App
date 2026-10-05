@@ -17,4 +17,21 @@
     <string name="perfil_hipertrofia">Hipertrofia</string>
     <string name="perfil_acondicionamiento">Acondicionamiento</string>
     <string name="btn_guardar_continuar">GUARDAR Y CONTINUAR</string>
+
+    <!-- Catalogo de ejercicios (RF5) -->
+    <string name="catalogo_titulo">Ejercicios</string>
+    <string name="catalogo_buscar">Buscar ejercicio...</string>
+    <string name="grupo_pecho">Pecho</string>
+    <string name="grupo_espalda">Espalda</string>
+    <string name="grupo_piernas">Piernas</string>
+    <string name="grupo_hombros">Hombros</string>
+    <string name="grupo_brazos">Brazos</string>
+    <string name="grupo_abdomen">Abdomen</string>
+
+    <!-- Detalle de ejercicio -->
+    <string name="detalle_instrucciones">Instrucciones</string>
+    <string name="detalle_guia">Guia de ejecucion</string>
+    <string name="detalle_consejo">Consejo tecnico</string>
+    <string name="detalle_ver_gif">GIF / Video</string>
+    <string name="detalle_volver">Volver</string>
 </resources>

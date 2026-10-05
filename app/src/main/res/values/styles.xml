@@ -33,4 +33,14 @@
         <item name="boxCornerRadiusBottomEnd">16dp</item>
     </style>
 
+
+    <!-- Chips del catalogo: se RELLENAN de lima al elegirlos.
+         Hereda los colores del tema (colorSecondaryContainer / colorSurface),
+         por eso no necesita archivos en res/color. Solo ajusta la forma. -->
+    <style name="Widget.GymMate.Chip.Choice" parent="Widget.Material3.Chip.Filter">
+        <item name="checkedIconVisible">false</item>
+        <item name="chipMinHeight">40dp</item>
+        <item name="chipCornerRadius">20dp</item>
+    </style>
+
 </resources>

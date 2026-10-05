@@ -3,5 +3,5 @@
     <!-- Seleccionado: sin relleno, solo se ve el borde lima -->
     <item android:state_checked="true" android:color="@android:color/transparent" />
     <!-- Comodin (siempre va ultimo): gris apagado -->
-    <item android:color="@color/gym_surface_variant" />
+    <item android:color="@color/gm_surface_variant" />
 </selector>

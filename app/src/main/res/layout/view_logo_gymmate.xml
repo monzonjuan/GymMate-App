@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    LOGOTIPO GYMMATE - pieza reutilizable
+
+    No es una pantalla: es un pedacito de interfaz que se repite en varias.
+    En vez de copiar estas lineas en cada layout, se escribe una sola vez
+    aca y se inserta donde haga falta con:
+
+        <include layout="@layout/view_logo_gymmate" />
+
+    Si maniana cambia el logo, lo cambias en UN archivo y se actualiza en
+    todas las pantallas. Es la misma idea de los @string y los @color,
+    pero aplicada a un bloque de vistas.
+
+    El logotipo son DOS cosas:
+      - el texto "GymMate"  -> un TextView (tipografia)
+      - la mancuerna        -> un ImageView con el vector ic_mancuerna
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textColor="@color/gm_text"
+        android:textSize="22sp"
+        android:textStyle="bold|italic"
+        android:letterSpacing="-0.03" />
+
+    <!-- La mancuerna va arriba a la derecha, como un exponente.
+         layout_gravity="top" la sube; el margen negativo la acerca
+         al texto para que se lea como una sola unidad. -->
+    <ImageView
+        android:layout_width="18dp"
+        android:layout_height="11dp"
+        android:layout_gravity="top"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:src="@drawable/ic_mancuerna"
+        android:contentDescription="@null" />
+
+</LinearLayout>

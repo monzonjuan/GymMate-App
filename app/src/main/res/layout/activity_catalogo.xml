@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    RF5 - Consultar catalogo de ejercicios
+
+    Estructura: cabecera fija (titulo + buscador + filtros) y debajo la lista,
+    que ocupa todo el alto restante. Por eso el raiz es un LinearLayout vertical:
+    la lista lleva height="0dp" + weight="1" (el mismo truco que usaste en los
+    3 campos del perfil, pero en vertical en vez de horizontal).
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gm_background">
+
+    <!-- ========================= CABECERA ========================= -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="24dp">
+
+        <!-- ####################################################
+             ## NUEVO - LO VEMOS JUNTOS: barra superior        ##
+             ##                                                ##
+             ## En el mockup hay el logo GymMate centrado y un ##
+             ## icono de mancuerna a la derecha. Eso necesita  ##
+             ## ImageView + drawables vectoriales, y todavia   ##
+             ## no tenemos ninguno (solo los del launcher).    ##
+             ## Lo armamos en la leccion de iconos.            ##
+             #################################################### -->
+
+        <TextView
+            android:id="@+id/tituloCatalogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/catalogo_titulo"
+            android:textColor="@color/gm_text"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            android:letterSpacing="-0.02" />
+
+        <!-- Buscador: el mismo TextInputLayout del perfil, con icono al inicio -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/contenedorBuscar"
+            style="@style/Widget.GymMate.TextInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/catalogo_buscar"
+            app:startIconDrawable="@android:drawable/ic_menu_search">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/campoBuscar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:imeOptions="actionSearch"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- NOTA: @android:drawable/ic_menu_search es un icono que trae Android
+             de fabrica. Esta de placeholder; lo cambiamos por uno acorde al
+             diseno cuando hagamos los vectores. -->
+
+        <!-- Filtros por grupo muscular.
+             Estos usan Widget.GymMate.Chip.Choice: se RELLENAN de lima al
+             elegirlos, al reves que los del perfil (que se vacian y muestran
+             borde). Por eso no necesitan archivos en res/color: los colores
+             salen del tema. -->
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/grupoFiltros"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:chipSpacingHorizontal="8dp"
+            app:chipSpacingVertical="8dp"
+            app:selectionRequired="true"
+            app:singleSelection="true"
+            app:checkedChip="@id/chipPecho">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipPecho"
+                style="@style/Widget.GymMate.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/grupo_pecho" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipEspalda"
+                style="@style/Widget.GymMate.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/grupo_espalda" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipPiernas"
+                style="@style/Widget.GymMate.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/grupo_piernas" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipHombros"
+                style="@style/Widget.GymMate.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/grupo_hombros" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipBrazos"
+                style="@style/Widget.GymMate.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/grupo_brazos" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipAbdomen"
+                style="@style/Widget.GymMate.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/grupo_abdomen" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+    </LinearLayout>
+
+    <!-- ####################################################
+         ## NUEVO - LO VEMOS JUNTOS: RecyclerView          ##
+         ##                                                ##
+         ## Aca va la lista de ejercicios. NO se escribe    ##
+         ## una fila por ejercicio: se define UN layout de  ##
+         ## fila (item_ejercicio.xml) y el RecyclerView lo  ##
+         ## repite tantas veces como datos haya, reciclando ##
+         ## las vistas que salen de pantalla.               ##
+         ##                                                 ##
+         ## Son 3 piezas: el RecyclerView (aca), el layout  ##
+         ## de la fila, y un Adapter en Java que los une.   ##
+         ##                                                 ##
+         ## Va a quedar asi:                                ##
+         ##   <androidx.recyclerview.widget.RecyclerView    ##
+         ##       android:id="@+id/listaEjercicios"         ##
+         ##       android:layout_width="match_parent"       ##
+         ##       android:layout_height="0dp"               ##
+         ##       android:layout_weight="1"                 ##
+         ##       tools:listitem="@layout/item_ejercicio"/> ##
+         #################################################### -->
+
+    <!-- Relleno provisorio para que la cabecera no quede flotando.
+         Se borra cuando entre el RecyclerView. -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- ####################################################
+         ## NUEVO - LO VEMOS JUNTOS: barra de navegacion   ##
+         ##                                                ##
+         ## Las 5 pestanias de abajo (Inicio / Rutinas /    ##
+         ## Ejercicios / Entrenar / Progreso).              ##
+         ## Necesita un BottomNavigationView + un archivo   ##
+         ## de menu en res/menu/ + 5 iconos.                ##
+         ##                                                 ##
+         ## OJO: esta barra es compartida con las pantallas ##
+         ## de Juan, asi que conviene acordarla con el      ##
+         ## antes de escribirla, para no duplicarla.        ##
+         #################################################### -->
+
+</LinearLayout>
