@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    BARRA DE NAVEGACION INFERIOR - pieza compartida por todas las pantallas.
+
+    Se inserta en cada layout con una sola linea:
+        <include layout="@layout/view_bottom_nav" />
+    Asi existe en UN solo archivo: si maniana cambia un icono o un color,
+    se toca aca y se actualiza en las 5 pantallas. Igual que el logo.
+
+    OJO: el archivo define COMO SE VE la barra, no que pestania esta
+    marcada. Eso depende de cada pantalla y se decide desde Java con
+    bottomNav.setSelectedItemId(R.id.nav_ejercicios).
+
+    Los atributos, uno por uno:
+
+    app:menu          -> de donde saca las 5 pestanias (el recurso menu)
+    app:itemIconTint  -> color del icono; apunta al selector de res/color,
+                         asi cambia solo entre lima y gris segun el estado
+    app:itemTextColor -> idem para el texto
+    app:labelVisibilityMode="labeled"
+                      -> muestra SIEMPRE el texto debajo del icono. Por
+                         defecto Material lo oculta en las no seleccionadas,
+                         y el mockup los muestra todos.
+    app:itemActiveIndicatorStyle
+                      -> saca la pildora de fondo del item activo
+    app:elevation="0dp"
+                      -> sin sombra: en tema oscuro la elevacion aclara la
+                         superficie, igual que pasaba con las tarjetas
+-->
+<com.google.android.material.bottomnavigation.BottomNavigationView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomNav"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gm_background"
+    app:menu="@menu/menu_bottom_nav"
+    app:itemIconTint="@color/nav_item_color"
+    app:itemTextColor="@color/nav_item_color"
+    app:labelVisibilityMode="labeled"
+    app:itemActiveIndicatorStyle="@style/Widget.GymMate.BottomNav.Indicator"
+    app:elevation="0dp" />
