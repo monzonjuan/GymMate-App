@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:weightSum="7">
+
+    <TextView
+        android:id="@+id/tvNumeroSerie"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@color/gm_text_secondary"
+        android:textSize="20sp"
+        tools:text="1" />
+
+    <EditText
+        android:id="@+id/etPeso"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="6dp"
+        android:layout_weight="2.5"
+        android:autofillHints="none"
+        android:background="@drawable/bg_chip_outline"
+        android:gravity="center"
+        android:hint="--"
+        android:inputType="numberDecimal"
+        android:textColor="@color/gm_text"
+        android:textColorHint="@color/gm_text_secondary"
+        android:textSize="18sp"
+        tools:text="90.0" />
+
+    <EditText
+        android:id="@+id/etReps"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="6dp"
+        android:layout_weight="2.5"
+        android:autofillHints="none"
+        android:background="@drawable/bg_chip_outline"
+        android:gravity="center"
+        android:hint="--"
+        android:inputType="number"
+        android:textColor="@color/gm_text"
+        android:textColorHint="@color/gm_text_secondary"
+        android:textSize="18sp"
+        tools:text="10" />
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/cbSerieCompletada"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        app:buttonTint="@color/gm_primary"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:checked="true" />
+</LinearLayout>

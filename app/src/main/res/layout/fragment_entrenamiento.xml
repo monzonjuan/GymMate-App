@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gm_background"
+    android:orientation="vertical">
+
+    <!-- Barra superior: cerrar, cronómetro, "En Vivo" -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageButton
+            android:id="@+id/btnCerrar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="start|center_vertical"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Cerrar"
+            android:src="@drawable/ic_close" />
+
+        <TextView
+            android:id="@+id/tvCronometro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="⏱ 24:15"
+            android:textColor="@color/gm_primary"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:text="En Vivo"
+            android:textColor="@color/gm_text_secondary"
+            android:textSize="14sp" />
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingHorizontal="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvNombreRutina"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gm_text"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                tools:text="Mi Rutina de Fuerza" />
+
+            <TextView
+                android:id="@+id/tvDiaRutina"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gm_text_secondary"
+                android:textSize="14sp"
+                tools:text="Día 1: Torso / Pierna" />
+
+            <!-- Tarjeta del ejercicio actual -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvEjercicioActual"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gm_text"
+                        android:textSize="20sp"
+                        tools:text="1. Press de Banca" />
+
+                    <TextView
+                        android:id="@+id/tvProgresoEjercicio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:textColor="@color/gm_text_secondary"
+                        android:textSize="14sp"
+                        tools:text="Ej. 1 de 5" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivEjercicio"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:background="@color/gm_text"
+                        android:contentDescription="Imagen del ejercicio" />
+
+                    <TextView
+                        android:id="@+id/tvVerTecnica"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:padding="4dp"
+                        android:text="Ver técnica"
+                        android:textColor="@color/gm_primary"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Encabezado de la tabla de series -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:weightSum="7">
+
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:gravity="center" android:text="SERIE"
+                    android:textColor="@color/gm_text_secondary" android:textSize="13sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="2.5" android:gravity="center" android:text="PESO (kg)"
+                    android:textColor="@color/gm_text_secondary" android:textSize="13sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="2.5" android:gravity="center" android:text="REPS"
+                    android:textColor="@color/gm_text_secondary" android:textSize="13sp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:gravity="center" android:text="✓"
+                    android:textColor="@color/gm_text_secondary" android:textSize="13sp" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSeries"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:nestedScrollingEnabled="false"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="4"
+                tools:listitem="@layout/item_serie" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAgregarSerie"
+                style="@style/GM.Button.Outline"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginVertical="8dp"
+                android:text="Agregar Serie"
+                app:icon="@drawable/ic_add" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Zona fija inferior -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_chip_outline"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/tvTemporizadorDescanso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:text="⏱ Temporizador de descanso\nactivo: 01:14"
+                android:textColor="@color/gm_primary"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/btnMasTreintaSeg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:background="@drawable/bg_circle_selected"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="4dp"
+                android:text="+30s"
+                android:textColor="@color/gm_on_primary"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnFinalizar"
+            style="@style/GM.Button.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="12dp"
+            android:text="FINALIZAR ENTRENAMIENTO" />
+    </LinearLayout>
+</LinearLayout>
