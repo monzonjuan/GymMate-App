@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Color del icono y del texto de cada pestania.
+     Mismo mecanismo que los chips: un color que depende del estado.
+     Ojo: aca el estado es state_checked, igual que en los chips. -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true" android:color="@color/gm_primary" />
+    <item android:color="@color/gm_text_secondary" />
+</selector>

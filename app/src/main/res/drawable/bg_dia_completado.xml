@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Dia ya entrenado: circulo lleno de lima.
+
+    Un <shape> es un dibujable generado por codigo, no una imagen: le decis
+    la forma y el relleno y Android lo dibuja. Pesa nada y escala perfecto.
+    "oval" + ancho igual al alto = circulo.
+-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <solid android:color="@color/gm_primary" />
+</shape>

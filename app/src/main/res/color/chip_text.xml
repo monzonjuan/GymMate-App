@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Seleccionado: texto lima -->
+    <item android:state_checked="true" android:color="@color/gm_primary" />
+    <!-- Comodin: texto blanco -->
+    <item android:color="@color/gm_text" />
+</selector>

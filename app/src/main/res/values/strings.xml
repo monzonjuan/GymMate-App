@@ -1,3 +1,84 @@
 <resources>
     <string name="app_name">GymMate</string>
+    <!-- Perfil físico -->
+    <string name="perfil_titulo">Perfil Físico</string>
+    <string name="perfil_subtitulo">Personaliza tu experiencia</string>
+    <string name="perfil_datos_basicos">Datos básicos</string>
+    <string name="perfil_edad">Edad</string>
+    <string name="perfil_peso">Peso (kg)</string>
+    <string name="perfil_altura">Altura (cm)</string>
+    <string name="perfil_nivel">Nivel de entrenamiento</string>
+    <string name="perfil_principiante">Principiante</string>
+    <string name="perfil_intermedio">Intermedio</string>
+    <string name="perfil_avanzado">Avanzado</string>
+    <string name="perfil_dias">Días disponibles semanales</string>
+    <string name="perfil_objetivo">Objetivo principal</string>
+    <string name="perfil_fuerza">Fuerza</string>
+    <string name="perfil_hipertrofia">Hipertrofia</string>
+    <string name="perfil_acondicionamiento">Acondicionamiento</string>
+    <string name="btn_guardar_continuar">GUARDAR Y CONTINUAR</string>
+
+    <!-- Catalogo de ejercicios (RF5) -->
+    <string name="catalogo_titulo">Ejercicios</string>
+    <string name="catalogo_buscar">Buscar ejercicio...</string>
+    <string name="grupo_pecho">Pecho</string>
+    <string name="grupo_espalda">Espalda</string>
+    <string name="grupo_piernas">Piernas</string>
+    <string name="grupo_hombros">Hombros</string>
+    <string name="grupo_brazos">Brazos</string>
+    <string name="grupo_abdomen">Abdomen</string>
+
+    <!-- Detalle de ejercicio -->
+    <string name="detalle_instrucciones">Instrucciones</string>
+    <string name="detalle_guia">Guia de ejecucion</string>
+    <string name="detalle_consejo">Consejo tecnico</string>
+    <string name="detalle_ver_gif">GIF / Video</string>
+    <string name="detalle_volver">Volver</string>
+
+    <!-- Barra de navegacion inferior -->
+    <string name="nav_inicio">Inicio</string>
+    <string name="nav_rutinas">Rutinas</string>
+    <string name="nav_ejercicios">Ejercicios</string>
+    <string name="nav_entrenar">Entrenar</string>
+    <string name="nav_progreso">Progreso</string>
+    <string name="volver">Volver</string>
+
+    <!-- Home -->
+    <string name="home_resumen">Resumen semanal</string>
+    <string name="home_progreso_semana">Tu progreso de la semana</string>
+    <string name="home_hoy_toca">HOY TOCA ENTRENAR</string>
+    <string name="home_empezar">EMPEZAR ENTRENAMIENTO</string>
+    <string name="home_ultimo">Ultimo Entrenamiento</string>
+    <string name="home_datos_rapidos">Datos Rapidos</string>
+    <string name="home_racha">Racha activa</string>
+    <string name="home_peso_actual">Peso actual</string>
+
+    <!-- Pantalla de Bienvenida (Welcome) -->
+    <string name="welcome_subtitle_1">Tu progreso bajo control</string>
+    <string name="welcome_subtitle_2">Asistente y Gestor de Rutinas</string>
+    <string name="btn_login">INICIAR SESIÓN</string>
+    <string name="btn_register">REGISTRARSE</string>
+    <string name="terms">Al contiunar, aceptas nuestros Términos y Políticas.</string>
+
+    <!-- Campos Comunes (Login / Registro) -->
+    <string name="email">Correo Electronico</string>
+    <string name="password">Contraseña</string>
+    <string name="confirm_password">Confirmar Contraseña</string>
+
+    <!-- Pantalla de Registro (Register) -->
+    <string name="create_account">Crear cuenta</string>
+    <string name="have_account">¿Ya tienes cuenta?</string>
+
+    <!-- Pantalla de Inicio de Sesión (Login) -->
+    <string name="tv_login">Inicia sesión</string>
+    <string name="subtitle_login">Tu progreso bajo control</string>
+    <string name="login_forgot_password">¿Olvidaste tu contraseña?</string>
+    <string name="login_dont_have_account">¿No tienes cuenta?</string>
+    <string name="login_sign_up">Regístrate</string>
+
+    <!-- Pantalla Recuperar Contraseña (Forgot Password) -->
+    <string name="forgot_recover_password">Recuperar contraseña</string>
+    <string name="forgot_instruction">Ingresa tu correo electrónico para enviarte un enlace de restablecimiento.</string>
+    <string name="forgot_send_link">ENVIAR ENLACE</string>
+    <string name="forgot_remember_password">¿Recordaste tu contraseña?</string>
 </resources>
