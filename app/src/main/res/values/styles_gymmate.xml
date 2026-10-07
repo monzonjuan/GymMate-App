@@ -1,4 +1,5 @@
 <resources>
+    <style name="GM" />
     <style name="GM.Button.Primary" parent="Widget.Material3.Button">
         <item name="backgroundTint">@color/gm_primary</item>
         <item name="android:textColor">@color/gm_on_primary</item>
