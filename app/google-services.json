@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "384847137491",
+    "project_id": "gymmate-app-76741",
+    "storage_bucket": "gymmate-app-76741.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:384847137491:android:779b45f096c40cb10de226",
+        "android_client_info": {
+          "package_name": "com.utn.gymmate"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLcUyTDfLwaRbREvfqp0FbbsiLwEF5gRw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
