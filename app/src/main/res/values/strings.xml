@@ -81,4 +81,11 @@
     <string name="forgot_instruction">Ingresa tu correo electrónico para enviarte un enlace de restablecimiento.</string>
     <string name="forgot_send_link">ENVIAR ENLACE</string>
     <string name="forgot_remember_password">¿Recordaste tu contraseña?</string>
+
+    <!-- Mensajes del RF4 (textuales del documento de requerimientos) -->
+    <string name="error_campos_obligatorios">Campos obligatorios sin completar</string>
+    <string name="error_numeros_positivos">El peso, la altura y la edad deben ser valores numericos positivos</string>
+    <string name="error_fuera_de_rango">Valores fuera de los rangos permitidos</string>
+    <string name="error_guardar_perfil">Error al guardar los cambios. Verifique su conexion a internet</string>
+    <string name="perfil_guardado_ok">Perfil fisico actualizado con exito</string>
 </resources>
