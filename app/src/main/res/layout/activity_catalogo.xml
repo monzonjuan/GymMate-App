@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-    RF5 - Consultar catalogo de ejercicios
 
-    Estructura: cabecera fija (titulo + buscador + filtros) y debajo la lista,
-    que ocupa todo el alto restante. Por eso el raiz es un LinearLayout vertical:
-    la lista lleva height="0dp" + weight="1" (el mismo truco que usaste en los
-    3 campos del perfil, pero en vertical en vez de horizontal).
--->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -15,7 +8,6 @@
     android:orientation="vertical"
     android:background="@color/gm_background">
 
-    <!-- ========================= CABECERA ========================= -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -35,7 +27,6 @@
             android:textStyle="bold"
             android:letterSpacing="-0.02" />
 
-        <!-- Buscador: el mismo TextInputLayout del perfil, con icono al inicio -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/contenedorBuscar"
             style="@style/Widget.GymMate.TextInput"
@@ -55,15 +46,6 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- NOTA: @android:drawable/ic_menu_search es un icono que trae Android
-             de fabrica. Esta de placeholder; lo cambiamos por uno acorde al
-             diseno cuando hagamos los vectores. -->
-
-        <!-- Filtros por grupo muscular.
-             Estos usan Widget.GymMate.Chip.Choice: se RELLENAN de lima al
-             elegirlos, al reves que los del perfil (que se vacian y muestran
-             borde). Por eso no necesitan archivos en res/color: los colores
-             salen del tema. -->
         <com.google.android.material.chip.ChipGroup
             android:id="@+id/grupoFiltros"
             android:layout_width="match_parent"
@@ -121,20 +103,6 @@
 
     </LinearLayout>
 
-    <!-- ===================== LISTA DE EJERCICIOS =====================
-         El RecyclerView es solo el HUECO. No sabe nada de ejercicios:
-         el que decide que va en cada fila es el Adapter, que se le
-         asigna desde Java.
-
-         - height="0dp" + weight="1" -> ocupa todo el alto que sobra
-           debajo de la cabecera.
-         - app:layoutManager -> como se acomodan las filas. Linear = una
-           debajo de otra. (Hay Grid y Staggered para otros casos.)
-         - tools:listitem -> SOLO para el Preview: le dice que molde
-           dibujar para que no veas un rectangulo vacio al maquetar.
-         - clipToPadding="false" -> deja que las filas se dibujen sobre
-           el padding al scrollear, en vez de cortarse de golpe.
-    -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/listaEjercicios"
         android:layout_width="match_parent"
@@ -147,7 +115,6 @@
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/item_ejercicio" />
 
-    <!-- Barra inferior: una linea, definida en view_bottom_nav.xml -->
     <include layout="@layout/view_bottom_nav" />
 
 </LinearLayout>
