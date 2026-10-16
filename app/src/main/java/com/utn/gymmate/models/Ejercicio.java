@@ -1,18 +1,18 @@
+
+/**
 package com.utn.gymmate.models;
 
 import java.util.List;
 
-/**
+
  * Un ejercicio del catalogo.
- *
  * Esto es un POJO (Plain Old Java Object): una clase que SOLO guarda datos.
  * No dibuja nada, no sabe que existe Android, no toca la base de datos.
  * Si maniana cambiamos de API o pasamos a Room, esta clase no se entera.
- *
  * Los campos son private y se leen con getters. Es la convencion de Java y
  * ademas es lo que esperan las librerias que vamos a usar despues (Gson para
  * leer el JSON de la API, Room para las tablas).
- */
+
 public class Ejercicio {
 
     private final String id;
@@ -51,13 +51,63 @@ public class Ejercicio {
     public List<String> getInstrucciones() { return instrucciones; }
     public String getConsejo() { return consejo; }
 
-    /**
+
      * El subtitulo que se muestra en cada fila del catalogo: "Pecho - Intermedio".
-     *
      * Lo arma el modelo y no el Adapter a proposito: es una regla sobre los
      * datos, no sobre como se dibujan. Si maniana el formato cambia, se toca
      * en un solo lugar.
-     */
+
+    public String getSubtitulo() {
+        return grupoMuscular + " - " + nivel;
+    }
+}
+*/
+
+package com.utn.gymmate.models;
+
+import java.util.List;
+
+/**
+ * Un ejercicio del catalogo. Solo guarda datos.
+ * Cada campo corresponde a una clave de assets/ejercicios.json.
+ */
+public class Ejercicio {
+
+    private final String id;
+    private final String nombre;
+    private final String grupoMuscular;
+    private final String nivel;
+    private final List<String> musculosSecundarios;
+    private final String descripcion;
+    private final List<String> instrucciones;
+    private final String archivoGif;      // solo el nombre: press_banca_plano.gif
+    private final String consejo;
+
+    public Ejercicio(String id, String nombre, String grupoMuscular, String nivel,
+                     List<String> musculosSecundarios, String descripcion,
+                     List<String> instrucciones, String archivoGif, String consejo) {
+        this.id = id;
+        this.nombre = nombre;
+        this.grupoMuscular = grupoMuscular;
+        this.nivel = nivel;
+        this.musculosSecundarios = musculosSecundarios;
+        this.descripcion = descripcion;
+        this.instrucciones = instrucciones;
+        this.archivoGif = archivoGif;
+        this.consejo = consejo;
+    }
+
+    public String getId() { return id; }
+    public String getNombre() { return nombre; }
+    public String getGrupoMuscular() { return grupoMuscular; }
+    public String getNivel() { return nivel; }
+    public List<String> getMusculosSecundarios() { return musculosSecundarios; }
+    public String getDescripcion() { return descripcion; }
+    public List<String> getInstrucciones() { return instrucciones; }
+    public String getArchivoGif() { return archivoGif; }
+    public String getConsejo() { return consejo; }
+
+    /** Subtitulo de cada fila del catalogo: "Pecho - Principiante". */
     public String getSubtitulo() {
         return grupoMuscular + " - " + nivel;
     }
