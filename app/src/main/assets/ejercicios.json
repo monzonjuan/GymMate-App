@@ -1,0 +1,354 @@
+[
+  {
+    "id": "ex001",
+    "nombre": "Press de banca plano",
+    "grupoMuscular": "Pecho",
+    "musculosSecundarios": [
+      "Tríceps",
+      "Deltoides anterior"
+    ],
+    "equipamiento": [
+      "Barra",
+      "Banco"
+    ],
+    "nivel": "Principiante",
+    "tipo": "Compuesto",
+    "descripcion": "Ejercicio de empuje realizado en banco plano con barra.",
+    "instrucciones": [
+      "Acostarse en el banco.",
+      "Tomar la barra.",
+      "Bajar de forma controlada hacia el pecho.",
+      "Empujar hasta la posición inicial."
+    ],
+    "archivoGif": "press_banca_plano.gif",
+    "consejo": "Mantener los pies apoyados y controlar el recorrido.",
+    "precauciones": "Evitar movimientos bruscos y usar una carga acorde al nivel.",
+    "activo": true
+  },
+  {
+    "id": "ex002",
+    "nombre": "Press inclinado con mancuernas",
+    "grupoMuscular": "Pecho",
+    "musculosSecundarios": [
+      "Tríceps",
+      "Deltoides anterior"
+    ],
+    "equipamiento": [
+      "Mancuernas",
+      "Banco inclinado"
+    ],
+    "nivel": "Principiante",
+    "tipo": "Compuesto",
+    "descripcion": "Ejercicio de empuje con mancuernas realizado en banco inclinado.",
+    "instrucciones": [
+      "Acomodarse en el banco.",
+      "Llevar las mancuernas a la posición inicial.",
+      "Bajar controladamente.",
+      "Empujar hacia arriba."
+    ],
+    "archivoGif": "press_inclinado_mancuernas.gif",
+    "consejo": "Realizar el movimiento de forma controlada.",
+    "precauciones": "No bajar las mancuernas de forma descontrolada.",
+    "activo": true
+  },
+  {
+    "id": "ex003",
+    "nombre": "Remo con barra",
+    "grupoMuscular": "Espalda",
+    "musculosSecundarios": [
+      "Bíceps",
+      "Deltoides posterior"
+    ],
+    "equipamiento": [
+      "Barra"
+    ],
+    "nivel": "Intermedio",
+    "tipo": "Compuesto",
+    "descripcion": "Ejercicio de tracción horizontal realizado con barra.",
+    "instrucciones": [
+      "Tomar la barra.",
+      "Inclinar el torso manteniendo una posición estable.",
+      "Llevar la barra hacia el torso.",
+      "Bajar controladamente."
+    ],
+    "archivoGif": "remo_barra.gif",
+    "consejo": "Mantener una postura estable durante todo el recorrido.",
+    "precauciones": "Evitar balancear el cuerpo para completar la repetición.",
+    "activo": true
+  },
+  {
+    "id": "ex004",
+    "nombre": "Jalón al pecho",
+    "grupoMuscular": "Espalda",
+    "musculosSecundarios": [
+      "Bíceps"
+    ],
+    "equipamiento": [
+      "Polea"
+    ],
+    "nivel": "Principiante",
+    "tipo": "Compuesto",
+    "descripcion": "Ejercicio de tracción vertical realizado en polea.",
+    "instrucciones": [
+      "Sentarse frente a la polea.",
+      "Sujetar la barra.",
+      "Llevarla hacia la parte superior del pecho.",
+      "Volver lentamente."
+    ],
+    "archivoGif": "jalon_pecho.gif",
+    "consejo": "Mantener el torso estable mientras se realiza el tirón.",
+    "precauciones": "Evitar tirar con impulso excesivo.",
+    "activo": true
+  },
+  {
+    "id": "ex005",
+    "nombre": "Sentadilla con barra",
+    "grupoMuscular": "Piernas",
+    "musculosSecundarios": [
+      "Glúteos",
+      "Core"
+    ],
+    "equipamiento": [
+      "Barra"
+    ],
+    "nivel": "Intermedio",
+    "tipo": "Compuesto",
+    "descripcion": "Ejercicio de piernas realizado con barra.",
+    "instrucciones": [
+      "Colocar la barra de forma estable.",
+      "Flexionar cadera y rodillas.",
+      "Descender de manera controlada.",
+      "Volver a la posición inicial."
+    ],
+    "archivoGif": "sentadilla_barra.gif",
+    "consejo": "Mantener una posición estable del torso y controlar la bajada.",
+    "precauciones": "No utilizar una carga que impida mantener una técnica controlada.",
+    "activo": true
+  },
+  {
+    "id": "ex006",
+    "nombre": "Prensa de piernas",
+    "grupoMuscular": "Piernas",
+    "musculosSecundarios": [
+      "Glúteos"
+    ],
+    "equipamiento": [
+      "Máquina"
+    ],
+    "nivel": "Principiante",
+    "tipo": "Compuesto",
+    "descripcion": "Ejercicio de empuje de piernas realizado en máquina.",
+    "instrucciones": [
+      "Colocar los pies en la plataforma.",
+      "Flexionar las piernas.",
+      "Descender de forma controlada.",
+      "Empujar hasta regresar."
+    ],
+    "archivoGif": "prensa_piernas.gif",
+    "consejo": "Controlar el recorrido durante la bajada y la subida.",
+    "precauciones": "No realizar movimientos bruscos.",
+    "activo": true
+  },
+  {
+    "id": "ex007",
+    "nombre": "Extensión de cuádriceps",
+    "grupoMuscular": "Piernas",
+    "musculosSecundarios": [],
+    "equipamiento": [
+      "Máquina"
+    ],
+    "nivel": "Principiante",
+    "tipo": "Aislamiento",
+    "descripcion": "Ejercicio de aislamiento para los extensores de la rodilla.",
+    "instrucciones": [
+      "Sentarse y ajustar la máquina.",
+      "Extender las piernas.",
+      "Regresar lentamente a la posición inicial."
+    ],
+    "archivoGif": "extension_cuadriceps.gif",
+    "consejo": "Usar un recorrido controlado.",
+    "precauciones": "Evitar movimientos bruscos.",
+    "activo": true
+  },
+  {
+    "id": "ex008",
+    "nombre": "Curl femoral",
+    "grupoMuscular": "Piernas",
+    "musculosSecundarios": [],
+    "equipamiento": [
+      "Máquina"
+    ],
+    "nivel": "Principiante",
+    "tipo": "Aislamiento",
+    "descripcion": "Ejercicio de aislamiento para la parte posterior del muslo.",
+    "instrucciones": [
+      "Ajustar la máquina.",
+      "Flexionar las piernas contra la resistencia.",
+      "Regresar lentamente."
+    ],
+    "archivoGif": "curl_femoral.gif",
+    "consejo": "Controlar especialmente el regreso.",
+    "precauciones": "No usar impulso para mover la carga.",
+    "activo": true
+  },
+  {
+    "id": "ex009",
+    "nombre": "Press militar con mancuernas",
+    "grupoMuscular": "Hombros",
+    "musculosSecundarios": [
+      "Tríceps"
+    ],
+    "equipamiento": [
+      "Mancuernas",
+      "Banco"
+    ],
+    "nivel": "Intermedio",
+    "tipo": "Compuesto",
+    "descripcion": "Ejercicio de empuje vertical realizado con mancuernas.",
+    "instrucciones": [
+      "Partir con las mancuernas a la altura de los hombros.",
+      "Empujar hacia arriba.",
+      "Bajar de forma controlada."
+    ],
+    "archivoGif": "press_militar_mancuernas.gif",
+    "consejo": "Mantener el movimiento estable y controlado.",
+    "precauciones": "Evitar compensaciones excesivas con el cuerpo.",
+    "activo": true
+  },
+  {
+    "id": "ex010",
+    "nombre": "Elevaciones laterales",
+    "grupoMuscular": "Hombros",
+    "musculosSecundarios": [],
+    "equipamiento": [
+      "Mancuernas"
+    ],
+    "nivel": "Principiante",
+    "tipo": "Aislamiento",
+    "descripcion": "Ejercicio de aislamiento realizado elevando los brazos hacia los lados.",
+    "instrucciones": [
+      "Sujetar las mancuernas.",
+      "Elevar los brazos lateralmente.",
+      "Detener el movimiento.",
+      "Regresar lentamente."
+    ],
+    "archivoGif": "elevaciones_laterales.gif",
+    "consejo": "Usar una carga que permita controlar el movimiento.",
+    "precauciones": "Evitar balancear el cuerpo.",
+    "activo": true
+  },
+  {
+    "id": "ex011",
+    "nombre": "Curl de bíceps con mancuernas",
+    "grupoMuscular": "Bíceps",
+    "musculosSecundarios": [],
+    "equipamiento": [
+      "Mancuernas"
+    ],
+    "nivel": "Principiante",
+    "tipo": "Aislamiento",
+    "descripcion": "Ejercicio de flexión de codo realizado con mancuernas.",
+    "instrucciones": [
+      "Sujetar las mancuernas.",
+      "Flexionar los codos.",
+      "Elevar las manos.",
+      "Bajar lentamente."
+    ],
+    "archivoGif": "curl_biceps_mancuernas.gif",
+    "consejo": "Mantener los codos relativamente estables.",
+    "precauciones": "Evitar usar impulso para subir la carga.",
+    "activo": true
+  },
+  {
+    "id": "ex012",
+    "nombre": "Extensión de tríceps en polea",
+    "grupoMuscular": "Tríceps",
+    "musculosSecundarios": [],
+    "equipamiento": [
+      "Polea"
+    ],
+    "nivel": "Principiante",
+    "tipo": "Aislamiento",
+    "descripcion": "Ejercicio de extensión de codo realizado en polea.",
+    "instrucciones": [
+      "Tomar el accesorio.",
+      "Mantener los codos estables.",
+      "Extender los brazos.",
+      "Regresar controladamente."
+    ],
+    "archivoGif": "extension_triceps_polea.gif",
+    "consejo": "Mantener el movimiento concentrado en los codos.",
+    "precauciones": "Evitar balancear el torso.",
+    "activo": true
+  },
+  {
+    "id": "ex013",
+    "nombre": "Plancha",
+    "grupoMuscular": "Abdomen",
+    "musculosSecundarios": [
+      "Core"
+    ],
+    "equipamiento": [
+      "Peso corporal"
+    ],
+    "nivel": "Principiante",
+    "tipo": "Isométrico",
+    "descripcion": "Ejercicio isométrico para mantener una posición estable del cuerpo.",
+    "instrucciones": [
+      "Apoyar antebrazos y pies.",
+      "Mantener el cuerpo alineado.",
+      "Sostener la posición durante el tiempo indicado."
+    ],
+    "archivoGif": "plancha.gif",
+    "consejo": "Mantener una posición estable durante todo el ejercicio.",
+    "precauciones": "Detener si no se puede mantener la posición indicada.",
+    "activo": true
+  },
+  {
+    "id": "ex014",
+    "nombre": "Crunch abdominal",
+    "grupoMuscular": "Abdomen",
+    "musculosSecundarios": [],
+    "equipamiento": [
+      "Peso corporal"
+    ],
+    "nivel": "Principiante",
+    "tipo": "Aislamiento",
+    "descripcion": "Ejercicio de flexión del tronco realizado en el suelo.",
+    "instrucciones": [
+      "Acostarse.",
+      "Flexionar las rodillas.",
+      "Elevar el tronco de forma controlada.",
+      "Regresar lentamente."
+    ],
+    "archivoGif": "crunch_abdominal.gif",
+    "consejo": "Realizar el movimiento de forma controlada.",
+    "precauciones": "Evitar tirar del cuello con las manos.",
+    "activo": true
+  },
+  {
+    "id": "ex015",
+    "nombre": "Hip thrust",
+    "grupoMuscular": "Glúteos",
+    "musculosSecundarios": [
+      "Isquiotibiales"
+    ],
+    "equipamiento": [
+      "Barra",
+      "Banco"
+    ],
+    "nivel": "Intermedio",
+    "tipo": "Compuesto",
+    "descripcion": "Ejercicio de extensión de cadera realizado con apoyo sobre un banco.",
+    "instrucciones": [
+      "Apoyar la parte superior de la espalda.",
+      "Colocar la carga.",
+      "Extender la cadera.",
+      "Volver de forma controlada."
+    ],
+    "archivoGif": "hip_trust.gif",
+    "consejo": "Controlar la extensión y la posición del tronco.",
+    "precauciones": "Evitar movimientos bruscos.",
+    "activo": true
+  }
+]

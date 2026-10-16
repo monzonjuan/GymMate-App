@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GymMate">
         <activity
+            android:name=".ui.catalogo.CatalogoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.catalogo.DetalleEjercicioActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.auth.ForgotPasswordActivity"
             android:exported="false" />
         <activity
