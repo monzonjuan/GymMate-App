@@ -11,7 +11,6 @@
         android:orientation="vertical"
         android:padding="24dp">
 
-        <!-- TÍTULO -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -29,7 +28,6 @@
             android:textSize="16sp"
             android:layout_marginTop="4dp" />
 
-        <!-- SECCIÓN: DATOS BÁSICOS -->
         <TextView
             android:id="@+id/lblDatosBasicos"
             android:layout_width="wrap_content"
@@ -39,7 +37,6 @@
             android:textSize="18sp"
             android:layout_marginTop="28dp" />
 
-        <!-- FILA DE 3 CAMPOS (resuelta: fijate el 0dp + weight) -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -47,6 +44,7 @@
             android:layout_marginTop="12dp">
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilEdad"
                 style="@style/Widget.GymMate.TextInput"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -60,6 +58,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilPeso"
                 style="@style/Widget.GymMate.TextInput"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -74,6 +73,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilAltura"
                 style="@style/Widget.GymMate.TextInput"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -98,6 +98,7 @@
             android:layout_marginTop="28dp" />
 
         <com.google.android.material.chip.ChipGroup
+            android:id="@+id/grupoNivel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -160,6 +161,7 @@
             android:textSize="18sp"
             android:layout_marginTop="28dp" />
         <com.google.android.material.chip.ChipGroup
+            android:id="@+id/grupoObjetivo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"

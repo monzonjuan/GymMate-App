@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-    Detalle de ejercicio (ficha tecnica del RF5)
 
-    Igual que el catalogo: LinearLayout vertical como raiz, con el contenido
-    scrolleable arriba (height="0dp" + weight="1") y la barra de navegacion
-    fija abajo. Si la barra estuviera DENTRO del ScrollView se iria hacia
-    arriba al scrollear, y tiene que quedarse quieta.
--->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -27,11 +20,6 @@
             android:orientation="vertical"
             android:padding="24dp">
 
-
-            <!-- Fila de volver. Sin logo a proposito: en una pantalla
-                 interna el logo ocupa ~68dp y no aporta nada, el usuario
-                 ya sabe en que app esta. La flecha SI hace falta: es la
-                 unica forma de volver al catalogo. -->
             <ImageView
                 android:id="@+id/btnVolver"
                 android:layout_width="54dp"
@@ -54,11 +42,6 @@
                 android:textStyle="bold"
                 android:letterSpacing="-0.02"
                 tools:text="Press de Banca" />
-
-            <!-- Chips de musculos. Son informativos, NO se tocan:
-                 por eso android:clickable="false" y sin ChipGroup
-                 con singleSelection. Van dentro de un ChipGroup igual,
-                 para que se acomoden solos y pasen de linea si no entran. -->
 
             <com.google.android.material.chip.ChipGroup
                 android:layout_width="match_parent"
@@ -132,11 +115,6 @@
                 android:textStyle="bold"
                 android:layout_marginTop="4dp" />
 
-            <!-- UN SOLO TextView para TODOS los pasos.
-                 Cada ejercicio trae una cantidad distinta de instrucciones
-                 (2, 3, 6...), asi que no sirve tener TextViews fijos.
-                 Java une la lista que viene de la API con saltos de linea
-                 y la mete aca de una sola vez. -->
             <TextView
                 android:id="@+id/instruccionesPasos"
                 android:layout_width="match_parent"
@@ -147,7 +125,6 @@
                 android:layout_marginTop="12dp"
                 tools:text="1. Apoya la espalda, gluteos y pies firmemente en el suelo y banco.\n2. Baja la barra de forma controlada hasta la altura del pecho.\n3. Empuja la barra hacia arriba con fuerza sin despegar los hombros." />
 
-            <!-- ===================== CONSEJO ===================== -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -199,7 +176,6 @@
         </LinearLayout>
     </ScrollView>
 
-    <!-- Barra inferior: una linea, definida en view_bottom_nav.xml -->
     <include layout="@layout/view_bottom_nav" />
 
 </LinearLayout>
