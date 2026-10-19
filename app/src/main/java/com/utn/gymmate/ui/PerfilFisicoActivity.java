@@ -1,5 +1,6 @@
 package com.utn.gymmate.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -156,7 +157,10 @@ public class PerfilFisicoActivity extends AppCompatActivity {
                 .set(datos, SetOptions.merge())
                 .addOnSuccessListener(x -> {
                     Toast.makeText(this, R.string.perfil_guardado_ok, Toast.LENGTH_SHORT).show();
-                    // TODO: navegación a la siguiente pantalla
+                    Intent intent = new Intent(this, HomeActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(intent);
+                    finish();
                 })
                 .addOnFailureListener(e -> {
                     btnGuardarPerfil.setEnabled(true);
