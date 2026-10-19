@@ -89,17 +89,14 @@
     <string name="error_guardar_perfil">Error al guardar los cambios. Verifique su conexion a internet</string>
     <string name="perfil_guardado_ok">Perfil fisico actualizado con exito</string>
 
-    <!-- RF1 Registrar usuario -->
     <string name="registro_ok">Cuenta creada con exito</string>
     <string name="error_correo_registrado">El correo ingresado ya se encuentra registrado</string>
     <string name="error_completar_campos">Por favor, complete todos los campos obligatorios</string>
     <string name="error_passwords_no_coinciden">Las contrasenias ingresadas no coinciden</string>
     <string name="error_password_corta">La contrasenia debe tener al menos 6 caracteres</string>
 
-    <!-- RF2 Iniciar sesion -->
     <string name="error_credenciales">Correo electronico o contrasenia incorrectos</string>
 
-    <!-- RF3 Recuperar contrasenia -->
     <string name="recuperacion_enviada">Correo de restablecimiento enviado con exito</string>
     <string name="error_email_invalido">Ingrese un correo electronico valido</string>
     <string name="error_email_no_registrado">El correo electronico no se encuentra registrado</string>
